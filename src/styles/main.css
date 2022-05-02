@@ -1,5 +1,48 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
   box-sizing: border-box;
   margin: 0;
+}
+
+.content {
+  font-family: 'Quicksand';
+}
+
+.content nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  padding: 0 1rem 0 1rem;
+}
+
+.content nav .logo {
+  flex-basis: 33%;
+  font-family: 'Righteous';
+  font-size: 3rem;
+}
+
+.content nav ul {
+  flex-basis: 33%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.content nav ul:last-of-type {
+  justify-content: space-evenly;
+}
+
+.content nav ul li {
+  height: 80px;
+  vertical-align: middle;
+}
+
+.content nav ul li:hover {
+  background-color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
