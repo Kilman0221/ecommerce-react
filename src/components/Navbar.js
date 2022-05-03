@@ -10,14 +10,14 @@ export default function Navbar() {
         <nav>
             <div className="logo">e-commerce</div>
             <ul>
-                <li>Home</li>
-                <li>Products</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Products</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact</a></li>
             </ul>
             <ul>
-                <li>Log-in</li>
-                <li>cart</li>
+                <li><a href="/">Log-in</a></li>
+                <li><a href="/">cart-holder</a></li>
             </ul>
         </nav>
     )

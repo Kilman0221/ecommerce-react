@@ -38,11 +38,28 @@
 }
 
 .content nav ul li {
-  height: 80px;
-  vertical-align: middle;
+  position: relative;
 }
 
-.content nav ul li:hover {
-  background-color: #fff;
+.content nav ul li a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content nav ul li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #eff30e;
+  top: 37px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.content nav ul li:hover::after {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
