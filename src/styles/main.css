@@ -34,7 +34,11 @@
 }
 
 .content nav ul:last-of-type {
-  justify-content: space-evenly;
+  justify-content: flex-end;
+}
+
+.content nav ul:last-of-type li {
+  margin: 0 2rem 0 0;
 }
 
 .content nav ul li {

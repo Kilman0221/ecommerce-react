@@ -25,6 +25,7 @@
             font-size: 3rem;
         }
 
+
         ul {
             flex-basis: 33%;
             display: flex;
@@ -33,7 +34,11 @@
             list-style-type: none;
 
             &:last-of-type {
-                justify-content: space-evenly;
+                justify-content: flex-end;
+
+                li {
+                    margin: 0 2rem 0 0;
+                }
             }
 
             li {
