@@ -38,7 +38,7 @@ export default function Products() {
                     <li><button>Jewelery</button></li>
                     <li><button>Men's clothing</button></li>
                     <li><button>Women's clothing</button></li>
-                    <li><input type="text" /></li>
+                    <li><input type="text" placeholder="Search" /></li>
                 </ul>
             </div>
             <div className="products"></div>
