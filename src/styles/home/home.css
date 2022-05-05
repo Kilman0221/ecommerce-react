@@ -1,0 +1,52 @@
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .filter {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 40%;
+  justify-content: center;
+}
+
+main .filter ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+main .filter ul li button {
+  width: 80px;
+  height: 50px;
+  border-radius: 7px;
+  border-style: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+main .filter ul li button:hover {
+  transition: .3s ease-in-out;
+  background-color: #eff30e;
+  color: #000;
+  font-weight: bold;
+}
+
+main .filter input {
+  flex-basis: 100%;
+  height: 50px;
+  margin-top: 2rem;
+  border-radius: 7px;
+  border: none;
+  background-color: #eff30e;
+  box-shadow: 0 0 0 0.25rem #000;
+  font-weight: bolder;
+  padding: 0 2rem 0 2rem;
+}
+/*# sourceMappingURL=home.css.map */

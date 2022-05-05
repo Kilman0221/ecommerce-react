@@ -3,10 +3,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-}
-
-.content {
-  font-family: 'Quicksand';
+  padding: 0;
+  font-family: 'Quicksand' !important;
 }
 
 .content nav {
