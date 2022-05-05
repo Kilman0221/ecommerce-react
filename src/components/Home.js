@@ -5,9 +5,9 @@ import Carousel from "./Carousel";
 
 export default function Home() {
 
-    const [data, setData] = useState();
+    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [filter, setFilter] = useState()
+    const [filter, setFilter] = useState([])
 
     let compMount = true;
     useEffect(() => {
@@ -41,7 +41,7 @@ export default function Home() {
 
     console.log(filter)
 
-    const products = filter.map(item => {
+    const products = filter.length > 0 ? filter.map(item => {
         return <Products
             id={item.id}
             title={item.title}
@@ -51,7 +51,7 @@ export default function Home() {
             img={item.image}
             rating={item.rating}
         />
-    })
+    }) : "";
     return (
         <main>
             {loading && "Loading..."}
