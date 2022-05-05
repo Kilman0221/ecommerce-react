@@ -7,9 +7,9 @@ export default function Products() {
 
 
     return (
-        <section>
-
-        </section>
+        <div className="product">
+            asd
+        </div>
 
     )
 }

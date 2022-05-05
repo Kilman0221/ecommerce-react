@@ -8,24 +8,50 @@ export default function Home() {
     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState()
+
+    let compMount = true;
     useEffect(() => {
 
-        const getData = async () => {
-            const res = await fetch('https://fakestoreapi.com/products');
+        const fetchData = async () => {
 
-            setData(await res.clone().json())
-            setFilter(await res.json())
+            setLoading(true)
+            const api = await fetch('https://fakestoreapi.com/products');
+            const json = await api.json();
 
-            setLoading(false)
+            setData(json)
+            setFilter(json)
         }
+        //     if (compMount) {
+        //         setFilter(await res.clone().json())
+        //         setLoading(false)
+        //         console.log(filter)
 
-        getData();
+        //     }
+
+        //     return () => {
+        //         compMount = false
+        //     }
+        // }
+
+        fetchData()
+
 
     }, [])
-    console.log(data)
-    console.log(loading)
 
 
+    console.log(filter)
+
+    const products = filter.map(item => {
+        return <Products
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            desc={item.description}
+            category={item.category}
+            img={item.image}
+            rating={item.rating}
+        />
+    })
     return (
         <main>
             {loading && "Loading..."}
@@ -42,7 +68,9 @@ export default function Home() {
                 </ul>
                 <input type="text" placeholder="Search for products" />
             </div>
-            <div className="products"></div>
+            <div className="products">
+                {products}
+            </div>
         </main>
     )
 }

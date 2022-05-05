@@ -6,7 +6,8 @@ export default function Carousel() {
 
 
     return (
-        <main>
-        </main>
+        <div className="car">
+            aethqa4tehtare
+        </div>
     )
 }
