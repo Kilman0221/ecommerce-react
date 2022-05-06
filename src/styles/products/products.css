@@ -1,13 +1,26 @@
 .product-card {
   display: flex;
   flex-wrap: wrap;
+  width: 80%;
+  position: relative;
 }
 
 .product-card img {
-  width: 100px;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.product-card h2,
+.product-card h3 {
+  flex-basis: 100%;
+  position: absolute;
 }
 
 .product-card h2 {
-  flex-basis: 100%;
+  top: 1rem;
+}
+
+.product-card h3 {
+  bottom: 1rem;
 }
 /*# sourceMappingURL=products.css.map */

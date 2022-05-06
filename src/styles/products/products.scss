@@ -1,12 +1,25 @@
 .product-card {
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
+    position: relative;
 
     img {
-        width: 100px;
+        max-width: 100%;
+        min-height: 100%;
+    }
+
+    h2,
+    h3 {
+        flex-basis: 100%;
+        position: absolute;
     }
 
     h2 {
-        flex-basis: 100%;
+        top: 1rem;
+    }
+
+    h3 {
+        bottom: 1rem;
     }
 }

@@ -10,7 +10,7 @@ export default function Products(props) {
         <div className="product-card">
             <img src={props.img}></img>
             <h2>{props.title}</h2>
-            <h3>{props.price}</h3>
+            <h3>Price: {props.price}$</h3>
         </div>
 
     )
