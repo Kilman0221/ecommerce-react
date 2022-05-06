@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=products.css.map */
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card img {
+  width: 100px;
+}
+
+.product-card h2 {
+  flex-basis: 100%;
+}
+/*# sourceMappingURL=products.css.map */

@@ -49,4 +49,10 @@ main .filter input {
   font-weight: bolder;
   padding: 0 2rem 0 2rem;
 }
+
+main .products {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 /*# sourceMappingURL=home.css.map */
