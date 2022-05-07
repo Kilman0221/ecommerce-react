@@ -62,13 +62,13 @@
             bottom: 1rem;
             right: .5rem;
             transform: skew(-15deg);
-            background-color: #000;
+            background-color: $neon-yellow;
             transition: .3s ease-in-out;
 
 
             a {
                 width: 100%;
-                color: #fff;
+                color: #000;
                 background-color: transparent;
                 height: 2rem;
                 display: flex;
@@ -76,16 +76,11 @@
                 align-items: center;
                 border-radius: 10px;
                 text-decoration: none;
-                transition: .3s ease-in-out;
                 transform: skew(15deg);
             }
 
             &:hover {
-                background-color: $accent-color;
-
-                a {
-                    color: #000;
-                }
+                background-color: $neon-blue;
             }
         }
 

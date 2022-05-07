@@ -22,11 +22,11 @@ main .filter ul {
 }
 
 main .filter ul li button {
-  width: 80px;
+  width: 100px;
   height: 50px;
   border-style: none;
   background-color: transparent;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   position: relative;
   transition: color .3s ease-in-out;
@@ -39,19 +39,18 @@ main .filter ul li button::after {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: black;
+  background-color: #f3e600;
   z-index: -1;
   transform: skew(-15deg);
   transition: background-color .3s ease-in-out;
 }
 
 main .filter ul li button:hover {
-  color: #000;
   font-weight: bold;
 }
 
 main .filter ul li button:hover::after {
-  background-color: #eff30e;
+  background-color: #04daf6;
 }
 
 main .filter label {
@@ -59,8 +58,13 @@ main .filter label {
   height: 50px;
   transform: skew(-15deg);
   padding: 0 2rem 0 2rem;
-  background-color: #eff30e;
+  background-color: #f3e600;
   margin-top: 2rem;
+  transition: background-color .3s ease-in-out;
+}
+
+main .filter label:focus-within {
+  background-color: #04daf6;
 }
 
 main .filter label #search-bar {

@@ -22,11 +22,11 @@ main {
 
             li {
                 button {
-                    width: 80px;
+                    width: 100px;
                     height: 50px;
                     border-style: none;
                     background-color: transparent;
-                    color: #fff;
+                    color: #000;
                     cursor: pointer;
                     position: relative;
                     transition: color .3s ease-in-out;
@@ -38,7 +38,7 @@ main {
                         right: 0;
                         left: 0;
                         bottom: 0;
-                        background-color: black;
+                        background-color: $neon-yellow;
                         z-index: -1;
                         transform: skew(-15deg);
                         transition: background-color .3s ease-in-out;
@@ -46,11 +46,10 @@ main {
                     }
 
                     &:hover {
-                        color: #000;
                         font-weight: bold;
 
                         &::after {
-                            background-color: $accent-color;
+                            background-color: $neon-blue;
                         }
                     }
                 }
@@ -62,8 +61,13 @@ main {
             height: 50px;
             transform: skew(-15deg);
             padding: 0 2rem 0 2rem;
-            background-color: $accent-color;
+            background-color: $neon-yellow;
             margin-top: 2rem;
+            transition: background-color .3s ease-in-out;
+
+            &:focus-within {
+                background-color: $neon-blue;
+            }
 
             #search-bar {
                 width: 100%;
@@ -76,6 +80,7 @@ main {
                 transform: skew(15deg);
 
             }
+
         }
 
     }
