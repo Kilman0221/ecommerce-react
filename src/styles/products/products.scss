@@ -29,14 +29,14 @@
 
             h2,
             h3,
-            a {
+            .anchor-wrapper {
                 opacity: 1;
             }
         }
 
         h2,
         h3,
-        a {
+        .anchor-wrapper {
             flex-basis: 100%;
             position: absolute;
             text-align: left;
@@ -57,24 +57,37 @@
             }
         }
 
-        a {
+        .anchor-wrapper {
+            width: 30%;
             bottom: 1rem;
-            right: 0;
-            color: #fff;
+            right: .5rem;
+            transform: skew(-15deg);
             background-color: #000;
-            width: 40%;
-            height: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            text-decoration: none;
             transition: .3s ease-in-out;
 
+
+            a {
+                width: 100%;
+                color: #fff;
+                background-color: transparent;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                text-decoration: none;
+                transition: .3s ease-in-out;
+                transform: skew(15deg);
+            }
+
             &:hover {
-                color: #000;
                 background-color: $accent-color;
+
+                a {
+                    color: #000;
+                }
             }
         }
+
     }
 }

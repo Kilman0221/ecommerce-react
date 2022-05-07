@@ -30,13 +30,13 @@
 
 .product-card .product-details:hover h2,
 .product-card .product-details:hover h3,
-.product-card .product-details:hover a {
+.product-card .product-details:hover .anchor-wrapper {
   opacity: 1;
 }
 
 .product-card .product-details h2,
 .product-card .product-details h3,
-.product-card .product-details a {
+.product-card .product-details .anchor-wrapper {
   flex-basis: 100%;
   position: absolute;
   text-align: left;
@@ -57,12 +57,19 @@
   bottom: 3rem;
 }
 
-.product-card .product-details a {
+.product-card .product-details .anchor-wrapper {
+  width: 30%;
   bottom: 1rem;
-  right: 0;
-  color: #fff;
+  right: .5rem;
+  transform: skew(-15deg);
   background-color: #000;
-  width: 40%;
+  transition: .3s ease-in-out;
+}
+
+.product-card .product-details .anchor-wrapper a {
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
   height: 2rem;
   display: flex;
   justify-content: center;
@@ -70,10 +77,14 @@
   border-radius: 10px;
   text-decoration: none;
   transition: .3s ease-in-out;
+  transform: skew(15deg);
 }
 
-.product-card .product-details a:hover {
-  color: #000;
+.product-card .product-details .anchor-wrapper:hover {
   background-color: #eff30e;
+}
+
+.product-card .product-details .anchor-wrapper:hover a {
+  color: #000;
 }
 /*# sourceMappingURL=products.css.map */

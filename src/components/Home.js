@@ -66,7 +66,10 @@ export default function Home() {
                     <li><button>Men's clothing</button></li>
                     <li><button>Women's clothing</button></li>
                 </ul>
-                <input type="text" placeholder="Search for products" />
+                <label htmlFor="search-bar">
+                    <input id="search-bar" type="text" placeholder="Search for products" />
+                </label>
+
             </div>
             <div className="products">
                 {products}

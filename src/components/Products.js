@@ -12,7 +12,9 @@ export default function Products(props) {
             <div className="product-details">
                 <h2>{props.title}</h2>
                 <h3>Price: {props.price}$</h3>
-                <a href="#">See more</a>
+                <span className="anchor-wrapper">
+                    <a href="#">See more</a>
+                </span>
                 <h3>Rating: {props.rating.rate}</h3>
             </div>
 
