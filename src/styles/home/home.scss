@@ -1,4 +1,4 @@
-@import '../variables/variables';
+@import '../variables/variables.scss';
 
 main {
     width: 100%;
@@ -29,9 +29,9 @@ main {
                     background-color: #000;
                     color: #fff;
                     cursor: pointer;
+                    transition: background-color .3s ease-in-out;
 
                     &:hover {
-                        transition: .3s ease-in-out;
                         background-color: $accent-color;
                         color: #000;
                         font-weight: bold;
@@ -46,7 +46,7 @@ main {
             margin-top: 2rem;
             border-radius: 7px;
             border: none;
-            background-color: $accent-color;
+            background-color: rgba($accent-color);
             box-shadow: 0 0 0 0.25rem #000;
             font-weight: bolder;
             padding: 0 2rem 0 2rem;
@@ -56,11 +56,12 @@ main {
     }
 
     .products {
-        width: 50%;
+        width: 80%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-content: center;
         justify-items: center;
-        gap: 2rem 2rem
+        gap: 2rem 2rem;
+        margin-top: 2rem;
     }
 }

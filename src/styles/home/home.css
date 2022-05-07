@@ -51,11 +51,12 @@ main .filter input {
 }
 
 main .products {
-  width: 50%;
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: center;
   justify-items: center;
   gap: 2rem 2rem;
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=home.css.map */

@@ -1,25 +1,75 @@
+@import '../variables/variables.scss';
+
 .product-card {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 80%;
+    max-height: 300px;
     position: relative;
+    overflow: hidden;
 
     img {
+        flex-shrink: 0;
         max-width: 100%;
-        min-height: 100%;
+        max-height: 100%;
+        object-fit: cover;
     }
 
-    h2,
-    h3 {
-        flex-basis: 100%;
+    .product-details {
         position: absolute;
-    }
+        width: 100%;
+        min-height: 100%;
+        transition: .5s;
+        border-radius: 10px;
 
-    h2 {
-        top: 1rem;
-    }
+        &:hover {
+            background-color: hsla(0, 0%, 100%, 0.8);
 
-    h3 {
-        bottom: 1rem;
+            h2,
+            h3,
+            a {
+                opacity: 1;
+            }
+        }
+
+        h2,
+        h3,
+        a {
+            flex-basis: 100%;
+            position: absolute;
+            text-align: left;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        h2 {
+            top: 1rem;
+        }
+
+        h3 {
+            bottom: 1rem;
+            left: 0;
+        }
+
+        a {
+            bottom: 1rem;
+            right: 0;
+            color: #000;
+            background-color: #fff;
+            width: 40%;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                background-color: $accent-color;
+            }
+        }
     }
 }
