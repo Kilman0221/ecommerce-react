@@ -46,7 +46,8 @@ main {
             margin-top: 2rem;
             border-radius: 7px;
             border: none;
-            background-color: rgba($accent-color);
+            outline: none;
+            background-color: $accent-color;
             box-shadow: 0 0 0 0.25rem #000;
             font-weight: bolder;
             padding: 0 2rem 0 2rem;
