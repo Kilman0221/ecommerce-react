@@ -23,8 +23,53 @@
 
         .logo {
             flex-basis: 33%;
-            font-family: 'VT323';
-            font-size: 3rem;
+
+            h1 {
+                font-family: 'VT323';
+                font-size: 4rem;
+                font-weight: 400;
+                width: max-content;
+                height: 60px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    width: .2rem;
+                    height: 2.5rem;
+                    position: absolute;
+                    left: 0;
+                    bottom: .5rem;
+                    z-index: 10;
+                    background: $neon-yellow;
+                    animation: typing 2s steps(11) forwards,
+                        blinking-line .8s steps(11) infinite;
+
+
+                    @keyframes blinking-line {
+                        to {
+                            background: transparent;
+                        }
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: #000;
+                    animation: typing 2s steps(11) forwards;
+                }
+
+                @keyframes typing {
+                    to {
+                        left: 100%;
+                    }
+                }
+            }
+
         }
 
 

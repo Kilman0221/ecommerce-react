@@ -8,7 +8,9 @@ export default function Navbar() {
 
     return (
         <nav>
-            <div className="logo">e-commerce</div>
+            <div className="logo">
+                <h1>E-COMMERCE_</h1>
+            </div>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/">Products</a></li>
