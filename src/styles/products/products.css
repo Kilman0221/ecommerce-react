@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+.product-card:hover img {
+  visibility: hidden;
+}
+
 .product-card img {
   flex-shrink: 0;
   max-width: 100%;
@@ -18,8 +22,10 @@
 
 .product-card .product-details {
   position: absolute;
-  width: 100%;
-  min-height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   transition: .5s;
   clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 0);
 }

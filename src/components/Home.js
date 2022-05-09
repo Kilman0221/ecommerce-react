@@ -19,18 +19,23 @@ export default function Home() {
 
             setData(json)
             setFilter(json)
+            setLoading(false)
 
 
         }
         fetchData()
-        setLoading(false)
-
 
     }, [])
 
 
     console.log(filter)
 
+    //filter functionality
+
+    const filterProducts = (category) => {
+        const updated = data.filter((prod) => prod.category == category)
+        setFilter(updated)
+    }
     const products = filter.length > 0 ? filter.map(item => {
         return <Products
             id={item.id}
@@ -54,11 +59,11 @@ export default function Home() {
             </div>
             <div className="filter">
                 <ul>
-                    <li><button>All</button></li>
-                    <li><button>Electronics</button></li>
-                    <li><button>Jewelery</button></li>
-                    <li><button>Men's clothing</button></li>
-                    <li><button>Women's clothing</button></li>
+                    <li><button onClick={() => { setFilter(data) }}>All</button></li>
+                    <li><button onClick={() => { filterProducts("electronics") }}>Electronics</button></li>
+                    <li><button onClick={() => { filterProducts("jewelery") }}>Jewelery</button></li>
+                    <li><button onClick={() => { filterProducts("men's clothing") }}>Men's clothing</button></li>
+                    <li><button onClick={() => { filterProducts("women's clothing") }}>Women's clothing</button></li>
                 </ul>
                 <label htmlFor="search-bar">
                     <input id="search-bar" type="text" placeholder="Search for products" />
