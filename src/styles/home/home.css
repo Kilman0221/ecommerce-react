@@ -91,12 +91,11 @@ main .filter label #search-bar {
 }
 
 main .products {
-  width: 80%;
+  width: 60%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 33% 33% 33%;
   align-content: center;
   justify-items: center;
-  gap: 2rem 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }

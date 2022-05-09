@@ -34,7 +34,7 @@ export default function Home() {
 
     const filterProducts = (category) => {
         const updated = data.filter((prod) => prod.category == category)
-        setFilter(updated)
+        setFilter(updated);
     }
     const products = filter.length > 0 ? filter.map(item => {
         return <Products
