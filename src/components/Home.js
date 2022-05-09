@@ -33,7 +33,7 @@ export default function Home() {
     //filter functionality
 
     const filterProducts = (category) => {
-        const updated = data.filter((prod) => prod.category == category)
+        const updated = data.filter((prod) => prod.category === category)
         setFilter(updated);
     }
     const products = filter.length > 0 ? filter.map(item => {
@@ -49,6 +49,16 @@ export default function Home() {
     }) : "";
 
 
+    function handleSearch(event) {
+        const input = event.target.value
+        if (input === "") {
+            setFilter(data)
+        } else {
+            const searched = data.filter((prod) => prod.title.toLowerCase().includes(input.toLowerCase()))
+            setFilter(searched)
+        }
+
+    }
 
 
 
@@ -66,7 +76,7 @@ export default function Home() {
                     <li><button onClick={() => { filterProducts("women's clothing") }}>Women's clothing</button></li>
                 </ul>
                 <label htmlFor="search-bar">
-                    <input id="search-bar" type="text" placeholder="Search for products" />
+                    <input id="search-bar" type="text" onChange={handleSearch} placeholder="Search for products" />
                 </label>
 
             </div>
