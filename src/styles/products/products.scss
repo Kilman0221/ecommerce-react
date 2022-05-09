@@ -22,10 +22,10 @@
         width: 100%;
         min-height: 100%;
         transition: .5s;
-        border-radius: 10px;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 0);
 
         &:hover {
-            background-color: hsla(0, 0%, 100%, 0.8);
+            background-color: $neon-yellow;
 
             h2,
             h3,
@@ -37,7 +37,7 @@
         h2,
         h3,
         .anchor-wrapper {
-            flex-basis: 100%;
+            width: 100%;
             position: absolute;
             text-align: left;
             opacity: 0;
@@ -45,6 +45,8 @@
         }
 
         h2 {
+            width: 80%;
+            flex-basis: 50%;
             top: 1rem;
         }
 
@@ -62,13 +64,13 @@
             bottom: 1rem;
             right: .5rem;
             transform: skew(-15deg);
-            background-color: $neon-yellow;
+            background-color: $neon-red;
             transition: .3s ease-in-out;
 
 
             a {
                 width: 100%;
-                color: #000;
+                color: white;
                 background-color: transparent;
                 height: 2rem;
                 display: flex;
@@ -77,10 +79,15 @@
                 border-radius: 10px;
                 text-decoration: none;
                 transform: skew(15deg);
+                transition: color .3s ease-in-out;
             }
 
             &:hover {
                 background-color: $neon-blue;
+
+                a {
+                    color: $base-black;
+                }
             }
         }
 

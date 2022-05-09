@@ -37,7 +37,7 @@
   left: 0;
   bottom: .5rem;
   z-index: 10;
-  background: #f3e600;
+  background: #fcee0a;
   animation: typing 2s steps(11) forwards, blinking-line 0.8s steps(11) infinite;
 }
 
@@ -96,7 +96,7 @@
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: #f3e600;
+  background-color: #fcee0a;
   top: 37px;
   opacity: 0;
   transition: opacity .3s ease-in-out;

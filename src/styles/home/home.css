@@ -10,72 +10,84 @@ main .filter {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 40%;
+  flex-basis: 100%;
   justify-content: center;
+  background-color: #fcee0a;
 }
 
 main .filter ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  flex-basis: 100%;
+  flex-basis: 50%;
+  margin-top: 2rem;
+}
+
+main .filter ul li {
+  width: 100%;
+}
+
+main .filter ul li:first-child {
+  clip-path: polygon(10% 0, 100% 0, 100% 65%, 100% 100%, 0 100%, 0 35%);
+}
+
+main .filter ul li:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 100%, 0 100%, 0% 50%);
 }
 
 main .filter ul li button {
-  width: 100px;
+  width: 100%;
   height: 50px;
   border-style: none;
-  background-color: transparent;
-  color: #000;
+  background-color: #FF013C;
+  color: #fff;
   cursor: pointer;
   position: relative;
-  transition: color .3s ease-in-out;
-}
-
-main .filter ul li button::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #f3e600;
-  z-index: -1;
-  transform: skew(-15deg);
-  transition: background-color .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 main .filter ul li button:hover {
   font-weight: bold;
-}
-
-main .filter ul li button:hover::after {
+  color: #000;
   background-color: #04daf6;
 }
 
 main .filter label {
   flex-basis: 100%;
+  display: flex;
+  justify-content: center;
   height: 50px;
-  transform: skew(-15deg);
   padding: 0 2rem 0 2rem;
-  background-color: #f3e600;
+  background-color: transparent;
   margin-top: 2rem;
-  transition: background-color .3s ease-in-out;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
-main .filter label:focus-within {
+main .filter label::after {
+  content: '';
+  position: absolute;
+  transform: translateY(48px);
+  width: 50%;
+  height: 50px;
+  background-color: #FF013C;
+  transition: all .5s ease-in-out;
+}
+
+main .filter label:focus-within::after {
   background-color: #04daf6;
+  transform: translateY(0px);
 }
 
 main .filter label #search-bar {
-  width: 100%;
+  width: 50%;
   height: 50px;
-  border-radius: 7px;
   border: none;
   outline: none;
   background-color: transparent;
   font-weight: bolder;
-  transform: skew(15deg);
+  z-index: 10;
 }
 
 main .products {

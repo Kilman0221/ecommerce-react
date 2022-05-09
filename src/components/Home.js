@@ -14,26 +14,16 @@ export default function Home() {
 
         const fetchData = async () => {
 
-            setLoading(true)
             const api = await fetch('https://fakestoreapi.com/products');
             const json = await api.json();
 
             setData(json)
             setFilter(json)
+
+
         }
-        //     if (compMount) {
-        //         setFilter(await res.clone().json())
-        //         setLoading(false)
-        //         console.log(filter)
-
-        //     }
-
-        //     return () => {
-        //         compMount = false
-        //     }
-        // }
-
         fetchData()
+        setLoading(false)
 
 
     }, [])
@@ -52,9 +42,13 @@ export default function Home() {
             rating={item.rating}
         />
     }) : "";
+
+
+
+
+
     return (
-        <main>
-            {loading && "Loading..."}
+        < main >
             <div className="trending">
                 <Carousel />
             </div>
@@ -72,8 +66,9 @@ export default function Home() {
 
             </div>
             <div className="products">
-                {products}
+                {loading ? "Loading..." : products}
             </div>
         </main>
+
     )
 }
