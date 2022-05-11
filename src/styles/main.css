@@ -20,7 +20,12 @@
   flex-basis: 33%;
 }
 
-.content nav .logo h1 {
+.content nav .logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.content nav .logo a h1 {
   font-family: 'VT323';
   font-size: 4rem;
   font-weight: 400;
@@ -29,7 +34,7 @@
   position: relative;
 }
 
-.content nav .logo h1::before {
+.content nav .logo a h1::before {
   content: '';
   width: .2rem;
   height: 2.5rem;
@@ -47,7 +52,7 @@
   }
 }
 
-.content nav .logo h1::after {
+.content nav .logo a h1::after {
   content: '';
   position: absolute;
   top: 0;

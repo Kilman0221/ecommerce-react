@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from 'react-router-dom'
 
 
 export default function Navbar() {
@@ -9,17 +9,16 @@ export default function Navbar() {
     return (
         <nav>
             <div className="logo">
-                <h1>E-COMMERCE_</h1>
+                <NavLink to="/"><h1>E-COMMERCE_</h1></NavLink>
             </div>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Products</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/About">About</NavLink></li>
+                <li><NavLink to="/Contact">Contact</NavLink></li>
             </ul>
             <ul>
-                <li><a href="/">Log-in</a></li>
-                <li><a href="/">cart-holder</a></li>
+                <li><NavLink to="/Loggin">Log-in</NavLink></li>
+                <li><NavLink to="/Cart">cart-holder</NavLink></li>
             </ul>
         </nav>
     )
