@@ -13,8 +13,10 @@
 
 
     &:hover {
+        background-color: $base-black;
+
         img {
-            visibility: hidden;
+            opacity: 0;
         }
     }
 

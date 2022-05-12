@@ -10,8 +10,12 @@
   background-color: white;
 }
 
+.product-card:hover {
+  background-color: #000;
+}
+
 .product-card:hover img {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .product-card img {

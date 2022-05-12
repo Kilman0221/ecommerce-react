@@ -7,12 +7,12 @@
 }
 
 .content nav {
-  color: white;
+  color: black;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 60px;
-  background-color: #000;
+  background-color: #fcee0a;
   padding: 0 1rem 0 1rem;
 }
 
@@ -22,7 +22,7 @@
 
 .content nav .logo a {
   text-decoration: none;
-  color: white;
+  color: #000;
 }
 
 .content nav .logo a h1 {
@@ -42,7 +42,7 @@
   left: 0;
   bottom: .5rem;
   z-index: 10;
-  background: #fcee0a;
+  background: #04daf6;
   animation: typing 2s steps(11) forwards, blinking-line 0.8s steps(11) infinite;
 }
 
@@ -59,7 +59,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: #000;
+  background: #fcee0a;
   animation: typing 2s steps(11) forwards;
 }
 
@@ -92,7 +92,8 @@
 .content nav ul li a {
   display: block;
   width: 100%;
-  color: #fff;
+  color: #000;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -100,9 +101,9 @@
   content: '';
   position: absolute;
   width: 100%;
-  height: 3px;
-  background-color: #fcee0a;
-  top: 37px;
+  height: 5px;
+  background-color: #04daf6;
+  top: 35px;
   opacity: 0;
   transition: opacity .3s ease-in-out;
 }
