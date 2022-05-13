@@ -6,7 +6,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: $base-black;
 
     .filter {
         margin-top: 2rem;
@@ -108,5 +107,6 @@ main {
         margin-top: 2rem;
         margin-bottom: 2rem;
         gap: 2rem;
+        color: #fff;
     }
 }
