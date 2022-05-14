@@ -5,6 +5,8 @@ import { BrowserRouter } from 'react-router-dom'
 import './styles/main.css'
 import './styles/products/products.css'
 import './styles/home/home.css'
+import './styles/product-page/product-page.css'
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
