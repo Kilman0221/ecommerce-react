@@ -10,7 +10,8 @@
 }
 
 .content {
-
+    min-height: 100vw;
+    background-color: $base-black;
 
     nav {
         color: black;
