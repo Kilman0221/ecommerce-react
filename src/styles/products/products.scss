@@ -27,41 +27,43 @@
         object-fit: cover;
     }
 
-    a {
-        color: $base-black;
-        text-decoration: none;
-
-
-        .product-details {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            transition: .5s;
-            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 0);
 
 
 
-            &:hover {
-                background-color: $neon-yellow;
+    .product-details {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: .5s;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 0);
 
-                h2,
-                h3,
-                .anchor-wrapper {
-                    opacity: 1;
-                }
-            }
+
+
+        &:hover {
+            background-color: $neon-yellow;
 
             h2,
             h3,
             .anchor-wrapper {
-                width: 100%;
-                position: absolute;
-                text-align: left;
-                opacity: 0;
-                transition: opacity .5s;
+                opacity: 1;
             }
+        }
+
+        h2,
+        h3,
+        .anchor-wrapper {
+            width: 100%;
+            position: absolute;
+            text-align: left;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        a {
+            color: $base-black;
+            text-decoration: none;
 
             h2 {
                 width: 80%;
@@ -77,39 +79,39 @@
                     bottom: 3rem;
                 }
             }
+        }
 
-            .anchor-wrapper {
-                width: 30%;
-                bottom: 1rem;
-                right: .5rem;
-                transform: skew(-15deg);
-                background-color: $neon-red;
-                transition: .3s ease-in-out;
+        .anchor-wrapper {
+            width: 30%;
+            bottom: 1rem;
+            right: .5rem;
+            transform: skew(-15deg);
+            background-color: $neon-red;
+            transition: .3s ease-in-out;
 
+
+            a {
+                width: 100%;
+                color: white;
+                background-color: transparent;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                text-decoration: none;
+                transform: skew(15deg);
+                transition: color .3s ease-in-out;
+            }
+
+            &:hover {
+                background-color: $neon-blue;
 
                 a {
-                    width: 100%;
-                    color: white;
-                    background-color: transparent;
-                    height: 2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 10px;
-                    text-decoration: none;
-                    transform: skew(15deg);
-                    transition: color .3s ease-in-out;
-                }
-
-                &:hover {
-                    background-color: $neon-blue;
-
-                    a {
-                        color: $base-black;
-                    }
+                    color: $base-black;
                 }
             }
         }
-
     }
+
 }

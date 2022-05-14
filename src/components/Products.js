@@ -8,22 +8,21 @@ export default function Products(props) {
 
     return (
         <div className="product-card">
-            <img src={props.img}></img>
-            <Link to={`product/${props.id}`}>
+            <img src={props.img} alt="product"></img>
 
-                <div className="product-details">
+            <div className="product-details">
+                <Link to={`product/${props.id}`}>
+
                     <h2>{props.title}</h2>
                     <h3>Price: {props.price}$</h3>
-                    <span className="anchor-wrapper">
-                        <Link to={
-                            {
-                                pathname: `products/product/${props.id}`,
-                                state: { id: props.id }
-                            }}>See more</Link>
-                    </span>
+
                     <h3>Rating: {props.rating.rate}</h3>
-                </div>
-            </Link>
+                </Link>
+
+                <span className="anchor-wrapper">
+                    <Link to="#">Add</Link>
+                </span>
+            </div>
 
         </div>
 

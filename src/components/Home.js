@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Products from "./Products";
 import Carousel from "./Carousel";
-
+import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
 
 export default function Home() {
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState([])
-
-    let compMount = true;
     useEffect(() => {
 
         const fetchData = async () => {
@@ -38,6 +36,7 @@ export default function Home() {
     }
     const products = filter.length > 0 ? filter.map(item => {
         return <Products
+            key={nanoid()}
             id={item.id}
             title={item.title}
             price={item.price}
@@ -48,7 +47,7 @@ export default function Home() {
         />
     }) : "";
 
-
+    console.log(products)
     function handleSearch(event) {
         const input = event.target.value
         if (input === "") {
