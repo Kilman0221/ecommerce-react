@@ -95,12 +95,18 @@
   position: relative;
 }
 
+.content nav ul li img {
+  max-width: 50px;
+  transition: filter .3s ease-in-out;
+}
+
 .content nav ul li a {
   display: block;
   width: 100%;
   color: #000;
   font-weight: bold;
   text-decoration: none;
+  transition: color .3s ease-in-out;
 }
 
 .content nav ul li::after {
@@ -116,5 +122,22 @@
 
 .content nav ul li:hover::after {
   opacity: 1;
+}
+
+.content nav ul:last-of-type li:last-of-type::after {
+  display: none;
+}
+
+.content nav ul:last-of-type li a {
+  display: flex;
+  align-items: center;
+}
+
+.content nav ul:last-of-type li:last-of-type:hover a {
+  color: #04daf6;
+}
+
+.content nav ul:last-of-type li:last-of-type:hover img {
+  filter: invert(67%) sepia(74%) saturate(1340%) hue-rotate(135deg) brightness(98%) contrast(97%);
 }
 /*# sourceMappingURL=main.css.map */

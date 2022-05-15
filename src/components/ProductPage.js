@@ -19,16 +19,20 @@ export default function ProductPage() {
 
     }, [])
 
+
+    function addToCart(id) {
+
+    }
     console.log(productDetails)
     return (
         isRendered ?
             <div className="product">
-                <img src={productDetails.image}></img>
+                <img src={productDetails.image} alt="product" />
                 <div className="product-info">
                     <h1>{productDetails.title}</h1>
                     <p>{productDetails.description}</p>
                     <p>Rating: {productDetails.rating.rate} ({productDetails.rating.count})</p>
-                    <Link to="#">Add to cart</Link>
+                    <Link to="#" onClick={() => addToCart(productDetails.id)}>Add to cart</Link>
                 </div>
             </div>
             : "Loading..."

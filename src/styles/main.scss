@@ -98,13 +98,22 @@
             li {
                 position: relative;
 
+                img {
+                    max-width: 50px;
+                    transition: filter .3s ease-in-out;
+                }
+
                 a {
                     display: block;
                     width: 100%;
                     color: $base-black;
                     font-weight: bold;
                     text-decoration: none;
+                    transition: color .3s ease-in-out;
+
                 }
+
+
 
                 &::after {
                     content: '';
@@ -124,6 +133,31 @@
                 }
             }
 
+            &:last-of-type {
+
+                li {
+                    &:last-of-type::after {
+                        display: none;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &:last-of-type:hover {
+                        a {
+                            color: $neon-blue;
+                        }
+
+                        img {
+                            filter: invert(67%) sepia(74%) saturate(1340%) hue-rotate(135deg) brightness(98%) contrast(97%);
+                        }
+                    }
+
+                }
+
+            }
 
         }
 

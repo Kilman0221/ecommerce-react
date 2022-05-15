@@ -80,6 +80,7 @@ export default function Home() {
 
             </div>
             <div className="products">
+
                 {loading ? "Loading..." : products}
             </div>
         </main>

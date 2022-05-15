@@ -18,7 +18,7 @@ export default function Navbar() {
             </ul>
             <ul>
                 <li><NavLink to="/loggin">Log-in</NavLink></li>
-                <li><NavLink to="/cart">cart-holder</NavLink></li>
+                <li><NavLink to="/cart"><img src="/Assets/cart.svg" alt="" /> (0)</NavLink></li>
             </ul>
         </nav>
     )
