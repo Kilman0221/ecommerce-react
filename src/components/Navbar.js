@@ -1,9 +1,20 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom'
 
 
 export default function Navbar() {
 
+    const [cartCount, setCartCount] = useState(0)
+
+    useEffect(() => {
+        window.addEventListener('storage', handleStorage())
+
+        function handleStorage() {
+            console.log("shgawg")
+            setCartCount(localStorage.length)
+        }
+    }, [cartCount])
 
 
     return (
@@ -17,8 +28,8 @@ export default function Navbar() {
                 <li><NavLink to="/contact">Contact</NavLink></li>
             </ul>
             <ul>
-                <li><NavLink to="/loggin">Log-in</NavLink></li>
-                <li><NavLink to="/cart"><img src="/Assets/cart.svg" alt="" /> (0)</NavLink></li>
+                <li><NavLink to="/login">Log-in</NavLink></li>
+                <li><NavLink to="/cart"><img src="/Assets/cart.svg" alt="" /> ({cartCount})</NavLink></li>
             </ul>
         </nav>
     )

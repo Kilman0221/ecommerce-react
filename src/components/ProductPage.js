@@ -6,7 +6,9 @@ export default function ProductPage() {
 
     const { id } = useParams();
     const [productDetails, setProductDetails] = useState([]);
-    const [isRendered, setRender] = useState(false)
+    const [isRendered, setRender] = useState(false);
+
+
     useEffect(() => {
         const fetchProduct = async () => {
             const call = await fetch(`https://fakestoreapi.com/products/${id}`)
@@ -20,7 +22,11 @@ export default function ProductPage() {
     }, [])
 
 
+
+
     function addToCart(id) {
+        localStorage.setItem(id, 1)
+        console.log("aerthaet")
 
     }
     console.log(productDetails)
