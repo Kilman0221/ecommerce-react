@@ -1,12 +1,14 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { NavLink } from 'react-router-dom'
 
 
 export default function Navbar() {
 
     const [cartCount, setCartCount] = useState(0)
+    const value = useContext(Context);
 
+    console.log(value)
     useEffect(() => {
         window.addEventListener('storage', handleStorage())
 
