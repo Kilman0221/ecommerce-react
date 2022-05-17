@@ -1,11 +1,12 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { NavLink } from 'react-router-dom'
+import CartContext from "../CartContext";
 
 
 export default function Navbar() {
 
-
+    const { cartItems } = useContext(CartContext)
 
     return (
         <nav>
@@ -19,7 +20,7 @@ export default function Navbar() {
             </ul>
             <ul>
                 <li><NavLink to="/login">Log-in</NavLink></li>
-                <li><NavLink to="/cart"><img src="/Assets/cart.svg" alt="" /> <span>0</span></NavLink></li>
+                <li><NavLink to="/cart"><img src="/Assets/cart.svg" alt="" /> <span>{cartItems.length}</span></NavLink></li>
             </ul>
         </nav>
     )

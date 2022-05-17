@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from 'react-router'
 import { Link } from "react-router-dom";
+import CartContext from "../CartContext";
 
 export default function ProductPage() {
 
@@ -8,6 +9,7 @@ export default function ProductPage() {
     const [productDetails, setProductDetails] = useState([]);
     const [isRendered, setRender] = useState(false);
 
+    const { addItems } = useContext(CartContext)
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -22,14 +24,6 @@ export default function ProductPage() {
     }, [])
 
 
-
-
-    function addToCart(id) {
-        localStorage.setItem(id, 1)
-        console.log("aerthaet")
-
-    }
-    console.log(productDetails)
     return (
         isRendered ?
             <div className="product">
@@ -38,7 +32,7 @@ export default function ProductPage() {
                     <h1>{productDetails.title}</h1>
                     <p>{productDetails.description}</p>
                     <p>Rating: {productDetails.rating.rate} ({productDetails.rating.count})</p>
-                    <Link to="#" onClick={() => addToCart(productDetails.id)}>Add to cart</Link>
+                    <Link to="#" onClick={() => addItems(productDetails.id, productDetails.title, 1)}>Add to cart</Link>
                 </div>
             </div>
             : "Loading..."

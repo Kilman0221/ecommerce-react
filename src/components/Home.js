@@ -26,7 +26,6 @@ export default function Home() {
     }, [])
 
 
-    console.log(filter)
 
     //filter functionality
 
