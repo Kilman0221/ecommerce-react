@@ -143,16 +143,41 @@
                     a {
                         display: flex;
                         align-items: center;
+
+                        img {
+                            position: relative;
+                        }
+
+                        span {
+                            position: absolute;
+                            top: 0;
+                            right: -1em;
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: $neon-red;
+                            text-align: center;
+                            border-radius: 50%;
+                            transition: all .3s ease-in-out;
+                        }
                     }
 
                     &:last-of-type:hover {
-                        a {
-                            color: $neon-blue;
-                        }
 
                         img {
                             filter: invert(67%) sepia(74%) saturate(1340%) hue-rotate(135deg) brightness(98%) contrast(97%);
+                            position: relative;
                         }
+
+                        span {
+                            background-color: $neon-blue;
+                            color: $base-black;
+                        }
+
+
                     }
 
                 }

@@ -133,11 +133,33 @@
   align-items: center;
 }
 
-.content nav ul:last-of-type li:last-of-type:hover a {
-  color: #04daf6;
+.content nav ul:last-of-type li a img {
+  position: relative;
+}
+
+.content nav ul:last-of-type li a span {
+  position: absolute;
+  top: 0;
+  right: -1em;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF013C;
+  text-align: center;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
 }
 
 .content nav ul:last-of-type li:last-of-type:hover img {
   filter: invert(67%) sepia(74%) saturate(1340%) hue-rotate(135deg) brightness(98%) contrast(97%);
+  position: relative;
+}
+
+.content nav ul:last-of-type li:last-of-type:hover span {
+  background-color: #04daf6;
+  color: #000;
 }
 /*# sourceMappingURL=main.css.map */

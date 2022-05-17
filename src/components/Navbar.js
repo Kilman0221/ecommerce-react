@@ -5,18 +5,6 @@ import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
 
-    const [cartCount, setCartCount] = useState(0)
-    const value = useContext(Context);
-
-    console.log(value)
-    useEffect(() => {
-        window.addEventListener('storage', handleStorage())
-
-        function handleStorage() {
-            console.log("shgawg")
-            setCartCount(localStorage.length)
-        }
-    }, [cartCount])
 
 
     return (
@@ -31,7 +19,7 @@ export default function Navbar() {
             </ul>
             <ul>
                 <li><NavLink to="/login">Log-in</NavLink></li>
-                <li><NavLink to="/cart"><img src="/Assets/cart.svg" alt="" /> ({cartCount})</NavLink></li>
+                <li><NavLink to="/cart"><img src="/Assets/cart.svg" alt="" /> <span>0</span></NavLink></li>
             </ul>
         </nav>
     )

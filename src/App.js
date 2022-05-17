@@ -9,21 +9,11 @@ import Cart from './components/Cart';
 
 function App() {
 
-  const [storageLength, setStorage] = useState();
-  const context = createContext(0);
-
-  useEffect(() => {
-    window.addEventListener('storage', () => {
-      setStorage(localStorage.length)
-    })
-  })
 
 
   return (
     <div className='content'>
-      <Context.Provider value={storageLength}>
-        <Navbar />
-      </Context.Provider>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
