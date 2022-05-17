@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from 'react-router-dom';
+import CartContext from "../CartContext";
 
 
 export default function Products(props) {
 
-
+    const { addItems } = useContext(CartContext)
 
     return (
         <div className="product-card">
@@ -20,7 +21,7 @@ export default function Products(props) {
                 </Link>
 
                 <span className="anchor-wrapper">
-                    <Link to="#">Add</Link>
+                    <Link to="#" onClick={() => addItems(props.id, props.title, 1)}>Add</Link>
                 </span>
             </div>
 

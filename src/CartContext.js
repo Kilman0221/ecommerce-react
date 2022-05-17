@@ -10,21 +10,23 @@ export function CartProvider({ children }) {
 
     const addItems = (id, title, qty) => {
 
-        console.log(cartItems)
 
 
         if (cartItems.length < 1) {
-            setCartItems(prevItems => [...prevItems, { id, title, qty }])
+            setCartItems(prevItems => [{ id, title, qty }])
         }
         else {
-            setCartItems(prevItems => prevItems.forEach(item => {
-                if (item.id === id) {
-                    console.log(item.id)
-                    // return item.qty++;
-                } else {
-                    return [...prevItems, { id, title, qty }]
-                }
-            }))
+
+            if (cartItems.filter(x => x.id === id).length > 0) {
+                setCartItems(prevItems => prevItems.map(item => {
+                    if (item.id === id) {
+                        item.qty += 1;
+                        return item
+                    } else return item
+                }))
+            } else {
+                setCartItems(prevItems => [...prevItems, { id, title, qty }])
+            }
         }
 
     }
@@ -33,6 +35,7 @@ export function CartProvider({ children }) {
 
     }
 
+    console.log(cartItems)
 
     return (
         <CartContext.Provider value={{ cartItems, addItems }}>

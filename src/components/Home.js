@@ -45,8 +45,6 @@ export default function Home() {
             rating={item.rating}
         />
     }) : "";
-
-    console.log(products)
     function handleSearch(event) {
         const input = event.target.value
         if (input === "") {
