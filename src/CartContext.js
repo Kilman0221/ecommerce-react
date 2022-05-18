@@ -6,7 +6,8 @@ const CartContext = createContext();
 
 export function CartProvider({ children }) {
 
-    const [cartItems, setCartItems] = useState([]);
+
+    const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cart') || "[]"));
 
     const addItems = (id, title, price, qty, img) => {
 
@@ -26,15 +27,26 @@ export function CartProvider({ children }) {
                 setCartItems(prevItems => [...prevItems, { id, title, price, qty, img }])
             }
         }
+
     }
 
     const removeItems = (id, qty) => {
+
+        setCartItems(prevItems => prevItems.map(item => {
+            if (item.id === id) {
+                item.qty -= 1;
+                return item
+            } else return item
+        }).filter(x => x.qty > 0))
     }
 
     console.log(cartItems)
 
+    localStorage.setItem('cart', JSON.stringify(cartItems))
+
+
     return (
-        <CartContext.Provider value={{ cartItems, addItems }}>
+        <CartContext.Provider value={{ cartItems, addItems, removeItems }}>
             {children}
         </CartContext.Provider >
     )

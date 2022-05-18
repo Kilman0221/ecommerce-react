@@ -1,4 +1,8 @@
+import { useContext } from 'react';
+import CartContext from '../CartContext';
 function CartItem(props) {
+
+    const { addItems, removeItems } = useContext(CartContext)
 
     console.log(props.img)
     return (
@@ -6,9 +10,9 @@ function CartItem(props) {
             <img src={props.img} alt="product" />
             <h2>{props.title}</h2>
             <p>{props.price}</p>
-            <button>+</button>
+            <button onClick={() => addItems(props.id, props.title, props.price, props.qty, props.img)}>+</button>
             <p>{props.qty}</p>
-            <button>-</button>
+            <button onClick={() => removeItems(props.id, props.title, props.price, props.qty, props.img)}>-</button>
         </div>
     )
 }
