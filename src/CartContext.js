@@ -8,12 +8,10 @@ export function CartProvider({ children }) {
 
     const [cartItems, setCartItems] = useState([]);
 
-    const addItems = (id, title, qty) => {
-
-
+    const addItems = (id, title, price, qty, img) => {
 
         if (cartItems.length < 1) {
-            setCartItems(prevItems => [{ id, title, qty }])
+            setCartItems(prevItems => [{ id, title, price, qty, img }])
         }
         else {
 
@@ -25,14 +23,12 @@ export function CartProvider({ children }) {
                     } else return item
                 }))
             } else {
-                setCartItems(prevItems => [...prevItems, { id, title, qty }])
+                setCartItems(prevItems => [...prevItems, { id, title, price, qty, img }])
             }
         }
-
     }
 
-    const removeItems = (id, title) => {
-
+    const removeItems = (id, qty) => {
     }
 
     console.log(cartItems)

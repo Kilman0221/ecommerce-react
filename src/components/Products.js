@@ -21,7 +21,7 @@ export default function Products(props) {
                 </Link>
 
                 <span className="anchor-wrapper">
-                    <Link to="#" onClick={() => addItems(props.id, props.title, 1)}>Add</Link>
+                    <Link to="#" onClick={() => addItems(props.id, props.title, props.price, 1, props.img)}>Add</Link>
                 </span>
             </div>
 

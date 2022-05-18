@@ -32,7 +32,7 @@ export default function ProductPage() {
                     <h1>{productDetails.title}</h1>
                     <p>{productDetails.description}</p>
                     <p>Rating: {productDetails.rating.rate} ({productDetails.rating.count})</p>
-                    <Link to="#" onClick={() => addItems(productDetails.id, productDetails.title, 1)}>Add to cart</Link>
+                    <Link to="#" onClick={() => addItems(productDetails.id, productDetails.title, productDetails.price, 1, productDetails.image)}>Add to cart</Link>
                 </div>
             </div>
             : "Loading..."

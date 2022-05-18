@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Products from "./Products";
-import Carousel from "./Carousel";
 import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
 
 export default function Home() {
@@ -60,9 +59,6 @@ export default function Home() {
 
     return (
         < main >
-            <div className="trending">
-                <Carousel />
-            </div>
             <div className="filter">
                 <ul>
                     <li><button onClick={() => { setFilter(data) }}>All</button></li>

@@ -1,34 +1,30 @@
-import { useEffect, useState } from "react";
-import { useParams } from 'react-router'
-import { Link } from "react-router-dom";
+import { useState, useContext } from "react";
+import CartContext from "../CartContext";
+import CartItem from "./CartItem";
+import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
+
+
 
 export default function ProductPage() {
 
-    const [productDetails, setProductDetails] = useState([]);
-    const [isRendered, setRender] = useState(false)
-    useEffect(() => {
-        const fetchProduct = async () => {
-            const call = await fetch(`https://fakestoreapi.com/products`)
-            const res = await call.json();
 
-            setProductDetails(res)
-            setRender(true)
-        }
-        fetchProduct()
+    const { cartItems, addItems, removeItems } = useContext(CartContext)
 
-    }, [])
 
-    const cartItems = () => {
-        localStorage.foreach(item => {
-            console.log("jest")
-        })
-    }
+    const cart = cartItems.map(item => {
+        return <CartItem
+            key={nanoid()}
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            qty={item.qty}
+            img={item.img}
+        />
+    })
 
     return (
-        isRendered ?
-            <div className="cart-wrapper">
-                {cartItems}
-            </div>
-            : "Loading..."
+        <div className="cart-wrapper">
+            {cart}
+        </div>
     )
 }
