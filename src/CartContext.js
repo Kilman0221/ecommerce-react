@@ -9,6 +9,7 @@ export function CartProvider({ children }) {
 
     const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cart') || "[]"));
 
+
     const addItems = (id, title, price, qty, img) => {
 
         if (cartItems.length < 1) {
@@ -30,20 +31,18 @@ export function CartProvider({ children }) {
 
     }
 
-    const removeItems = (id, qty) => {
+    const removeItems = (id) => {
 
-        setCartItems(prevItems => prevItems.map(item => {
+        setCartItems(prevItems => prevItems.map(item => {   //
             if (item.id === id) {
                 item.qty -= 1;
                 return item
             } else return item
-        }).filter(x => x.qty > 0))
+        }).filter(x => x.qty > 0)) //flitering items which qty value is below 1
     }
 
-    console.log(cartItems)
 
     localStorage.setItem('cart', JSON.stringify(cartItems))
-
 
     return (
         <CartContext.Provider value={{ cartItems, addItems, removeItems }}>

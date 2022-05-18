@@ -6,6 +6,8 @@ import './styles/main.css'
 import './styles/products/products.css'
 import './styles/home/home.css'
 import './styles/product-page/product-page.css'
+import './styles/cart/cart.css'
+
 
 
 
