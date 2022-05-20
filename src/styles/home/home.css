@@ -107,5 +107,14 @@ main .products {
   main .products {
     grid-template-columns: 100%;
   }
+  main .filter ul {
+    flex-basis: 100%;
+  }
+  main .filter label {
+    flex-basis: 80%;
+  }
+  main .filter label #search-bar {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=home.css.map */

@@ -115,6 +115,23 @@ main {
     @media only screen and (max-width: 800px) {
         .products {
             grid-template-columns: 100%;
+
         }
+
+        .filter {
+            ul {
+                flex-basis: 100%;
+            }
+
+            label {
+                flex-basis: 80%;
+
+                #search-bar {
+                    width: 100%;
+                }
+            }
+
+        }
+
     }
 }
