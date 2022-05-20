@@ -41,11 +41,15 @@ export function CartProvider({ children }) {
         }).filter(x => x.qty > 0)) //flitering items which qty value is below 1
     }
 
+    const deleteItem = (id) => {
+        setCartItems(prevItems => prevItems.filter(x => x.id !== id))
+    }
+
 
     localStorage.setItem('cart', JSON.stringify(cartItems))
 
     return (
-        <CartContext.Provider value={{ cartItems, addItems, removeItems }}>
+        <CartContext.Provider value={{ cartItems, addItems, removeItems, deleteItem }}>
             {children}
         </CartContext.Provider >
     )

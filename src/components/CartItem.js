@@ -5,7 +5,7 @@ import CartContext from '../CartContext';
 
 function CartItem(props) {
 
-    const { addItems, removeItems } = useContext(CartContext)
+    const { addItems, removeItems, deleteItem } = useContext(CartContext)
     const [total, setTotal] = useState(0)
 
     useEffect(() => {
@@ -26,6 +26,9 @@ function CartItem(props) {
             </div>
             <div className="checkout">
                 <p>Price to pay: {total.toFixed(2)}$</p>
+            </div>
+            <div className="remove" onClick={() => deleteItem(props.id)}>
+                x
             </div>
         </div>
     )

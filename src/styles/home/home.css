@@ -102,4 +102,10 @@ main .products {
   gap: 2rem;
   color: #fff;
 }
+
+@media only screen and (max-width: 800px) {
+  main .products {
+    grid-template-columns: 100%;
+  }
+}
 /*# sourceMappingURL=home.css.map */

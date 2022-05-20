@@ -24,7 +24,15 @@ export default function ProductPage() {
 
     return (
         <div className="cart-wrapper">
-            {cart}
+            <div className="finish">
+                <button>Proceed to checkout</button>
+            </div>
+            {cartItems.length < 1
+                ?
+                <p>"Your cart is empty"</p>
+                :
+                cart
+            }
         </div>
     )
 }

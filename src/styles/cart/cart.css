@@ -5,6 +5,27 @@
   justify-content: center;
 }
 
+.cart-wrapper p {
+  width: 40%;
+  text-align: center;
+}
+
+.cart-wrapper .finish {
+  height: 5rem;
+  flex-basis: 80%;
+  background-color: #fcee0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.cart-wrapper .finish button {
+  width: 25%;
+  height: 2rem;
+  font-size: 20px;
+}
+
 .cart-wrapper button {
   outline: none;
   border: none;
@@ -30,6 +51,7 @@
   justify-content: space-between;
   align-items: center;
   color: #000;
+  position: relative;
 }
 
 .cart-wrapper .cart-item img {
@@ -47,7 +69,7 @@
 }
 
 .cart-wrapper .cart-item .details p {
-  flex-basis: 30%;
+  flex-basis: 50%;
   margin-top: 1rem;
 }
 
@@ -56,6 +78,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.cart-wrapper .cart-item .details .qty-controlls p {
+  margin: 0;
+  text-align: center;
 }
 
 .cart-wrapper .cart-item .details .qty-controlls button {
@@ -77,5 +105,13 @@
   background-color: #FF013C;
   color: #fff;
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.cart-wrapper .cart-item .remove {
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  font-size: 20px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=cart.css.map */
