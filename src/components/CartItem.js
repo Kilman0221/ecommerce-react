@@ -25,8 +25,7 @@ function CartItem(props) {
                 </div>
             </div>
             <div className="checkout">
-                <p>Price to pay: {total}$</p>
-                <button>Checkout</button>
+                <p>Price to pay: {total.toFixed(2)}$</p>
             </div>
         </div>
     )
