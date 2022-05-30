@@ -24,6 +24,6 @@ To Start Server:
 
 To Visit App:
 
-### `localhost:3000/gutenberg-project)`
+### `localhost:3000
 
 
